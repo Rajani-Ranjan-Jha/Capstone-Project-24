@@ -28,28 +28,28 @@ class FaceRecognitionSystem2:
         self.root.state('zoomed')
 
         #1st image
-        img1=Image.open(r"Used Pictures\top1.png")
-        img1=img1.resize((500,130),Image.Resampling.LANCZOS)
+        img1=Image.open(r"Used Pictures\firstImg.png")
+        img1=img1.resize((1500,130),Image.Resampling.LANCZOS)
         self.photoimg1=ImageTk.PhotoImage(img1)
         
         label1=Label(self.root,image=self.photoimg1)
-        label1.place(x=0,y=0,width=500,height=130)
+        label1.place(x=0,y=0,width=1500,height=130)
 
-        #2nd image
-        img2=Image.open(r"Used Pictures\top2.jpg")
-        img2=img2.resize((500,130),Image.Resampling.LANCZOS)
-        self.photoimg2=ImageTk.PhotoImage(img2)
+        # #2nd image
+        # img2=Image.open(r"Used Pictures\top2.jpg")
+        # img2=img2.resize((500,130),Image.Resampling.LANCZOS)
+        # self.photoimg2=ImageTk.PhotoImage(img2)
         
-        label2=Label(self.root,image=self.photoimg2)
-        label2.place(x=500,y=0,width=500,height=130)
+        # label2=Label(self.root,image=self.photoimg2)
+        # label2.place(x=500,y=0,width=500,height=130)
 
-        #3rd image
-        img3=Image.open(r"Used Pictures\top3.jpg")
-        img3=img3.resize((500,130),Image.Resampling.LANCZOS)
-        self.photoimg3=ImageTk.PhotoImage(img3)
+        # #3rd image
+        # img3=Image.open(r"Used Pictures\top3.jpg")
+        # img3=img3.resize((500,130),Image.Resampling.LANCZOS)
+        # self.photoimg3=ImageTk.PhotoImage(img3)
         
-        label3=Label(self.root,image=self.photoimg3)
-        label3.place(x=1000,y=0,width=500,height=130)
+        # label3=Label(self.root,image=self.photoimg3)
+        # label3.place(x=1000,y=0,width=500,height=130)
 
         #background image
         img4=Image.open(r"Used Pictures\faceR.webp")

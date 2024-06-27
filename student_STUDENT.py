@@ -34,32 +34,32 @@ class Student1:
         self.teacher_var=StringVar()
 
         #1st image
-        img13=Image.open(r"Used Pictures\studenttop1.webp")
-        img13=img13.resize((500,130),Image.Resampling.LANCZOS)
-        self.photoimg13=ImageTk.PhotoImage(img13)
+        img1=Image.open(r"Used Pictures\firstImg.png")
+        img1=img1.resize((1500,130),Image.Resampling.LANCZOS)
+        self.photoimg1=ImageTk.PhotoImage(img1)
         
-        label13=Label(self.root,image=self.photoimg13)
-        label13.place(x=0,y=0,width=500,height=130)
+        label1=Label(self.root,image=self.photoimg1)
+        label1.place(x=0,y=0,width=1500,height=130)
 
 
-        #2nd image
-        img14=Image.open(r"Used Pictures\studenttop2.jpg")
-        img14=img14.resize((400,130),Image.Resampling.LANCZOS)
-        self.photoimg14=ImageTk.PhotoImage(img14)
+        # #2nd image
+        # img14=Image.open(r"Used Pictures\studenttop2.jpg")
+        # img14=img14.resize((400,130),Image.Resampling.LANCZOS)
+        # self.photoimg14=ImageTk.PhotoImage(img14)
         
-        label14=Label(self.root,image=self.photoimg14)
-        label14.place(x=500,y=0,width=400,height=130)
+        # label14=Label(self.root,image=self.photoimg14)
+        # label14.place(x=500,y=0,width=400,height=130)
 
-        #3rd image
-        img15=Image.open(r"Used Pictures\student2.jpg")
-        img15=img15.resize((500,130),Image.Resampling.LANCZOS)
-        self.photoimg15=ImageTk.PhotoImage(img15)
+        # #3rd image
+        # img15=Image.open(r"Used Pictures\student2.jpg")
+        # img15=img15.resize((500,130),Image.Resampling.LANCZOS)
+        # self.photoimg15=ImageTk.PhotoImage(img15)
         
-        label15=Label(self.root,image=self.photoimg15)
-        label15.place(x=900,y=0,width=500,height=130)
+        # label15=Label(self.root,image=self.photoimg15)
+        # label15.place(x=900,y=0,width=500,height=130)
 
         #background image
-        img16=Image.open(r"Used Pictures\faceR.webp")
+        img16=Image.open(r"Used Pictures\faceR1.webp")
         img16=img16.resize((1370,600),Image.Resampling.LANCZOS)
         self.photoimg16=ImageTk.PhotoImage(img16)
         
