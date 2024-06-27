@@ -3,6 +3,7 @@ from customtkinter import*
 from tkinter import ttk
 from PIL import Image,ImageTk
 from student_STUDENT import Student1 #for student window of a student
+from developer import Developer
 import os
 from tkinter import messagebox
 import numpy as np
@@ -109,10 +110,10 @@ class FaceRecognitionSystem1:
         img11=img11.resize((150,150),Image.Resampling.LANCZOS)
         self.photoimg11=ImageTk.PhotoImage(img11)
         
-        button7=Button(label4,image=self.photoimg11,cursor='hand2',bd=0)
+        button7=Button(label4,image=self.photoimg11,cursor='hand2',command=self.developer,bd=0)
         button7.place(x=620,y=350,width=150,height=150)
 
-        buttonlbl7=CTkButton(label4,width=150,height=40,text='Developers',font=('times new roman',15,'bold'),fg_color='black',corner_radius=0,text_color='white',hover_color='#595959')
+        buttonlbl7=CTkButton(label4,width=150,height=40,text='Developers',command=self.developer,font=('times new roman',15,'bold'),fg_color='black',corner_radius=0,text_color='white',hover_color='#595959')
         buttonlbl7.place(x=620,y=500)
 
         #Exit button
@@ -253,6 +254,11 @@ class FaceRecognitionSystem1:
 
         except Exception as es:
             messagebox.showerror("Error", f"Due To :{str(es)}", parent=self.root)
+
+    #developer
+    def developer(self):
+        self.new_window=Toplevel(self.root)
+        self.app=Developer(self.new_window, self.root)
 
     #exit
     def exit_button(self):

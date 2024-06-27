@@ -4,6 +4,7 @@ from tkinter import ttk
 from PIL import Image,ImageTk
 from student_ADMIN import Student2 #for student window of an admin
 from attendance import Attendance #for attendance window
+from developer import Developer
 import os
 from tkinter import messagebox
 import numpy as np
@@ -134,10 +135,10 @@ class FaceRecognitionSystem2:
         img11=img11.resize((150,150),Image.Resampling.LANCZOS)
         self.photoimg11=ImageTk.PhotoImage(img11)
         
-        button7=Button(label4,image=self.photoimg11,cursor='hand2',bd=0)
+        button7=Button(label4,image=self.photoimg11,cursor='hand2',command=self.developer,bd=0)
         button7.place(x=800,y=350,width=150,height=150)
 
-        buttonlbl7=CTkButton(label4,width=150,height=40,text='Developers',font=('times new roman',15,'bold'),fg_color='black',corner_radius=0,text_color='white',hover_color='#595959')
+        buttonlbl7=CTkButton(label4,width=150,height=40,text='Developers',command=self.developer,font=('times new roman',15,'bold'),fg_color='black',corner_radius=0,text_color='white',hover_color='#595959')
         buttonlbl7.place(x=800,y=500)
 
         #Exit button
@@ -145,7 +146,7 @@ class FaceRecognitionSystem2:
         img12=img12.resize((150,150),Image.Resampling.LANCZOS)
         self.photoimg12=ImageTk.PhotoImage(img12)
         
-        button8=Button(label4,image=self.photoimg12,cursor='hand2',command=self.exit_button,bd=0)
+        button8=Button(label4,image=self.photoimg12,cursor='hand2',command=self.exit_button,bd=0,bg='black')
         button8.place(x=1100,y=350,width=150,height=150)
 
         buttonlbl8=CTkButton(label4,command=self.exit_button,width=150,height=40,text='Exit',font=('times new roman',15,'bold'),fg_color='black',corner_radius=0,text_color='white',hover_color='#595959')
@@ -287,7 +288,12 @@ class FaceRecognitionSystem2:
 
         except Exception as es:
             messagebox.showerror("Error", f"Due To :{str(es)}", parent=self.root)
-    
+
+    #developer
+    def developer(self):
+        self.new_window=Toplevel(self.root)
+        self.app=Developer(self.new_window, self.root)
+
     #exit
     def exit_button(self):
         ask_exit=messagebox.askyesno("Exit!","Do you want to exit?",parent=self.root)
